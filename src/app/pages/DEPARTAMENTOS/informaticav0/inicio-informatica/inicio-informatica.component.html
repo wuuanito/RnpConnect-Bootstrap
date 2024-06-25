@@ -1,0 +1,90 @@
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
+      <h1 class="h2">Panel de Control TI</h1>
+    </div>
+  
+    <!-- KPI Cards -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 mb-4">
+      <div class="col">
+        <div class="card h-100 border-0 bg-light">
+          <div class="card-body">
+            <h6 class="card-title text-muted">Proyectos Activos</h6>
+            <h2 class="card-text">18</h2>
+            <small class="text-success"><i class="bi bi-arrow-up"></i> 12%</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-0 bg-light">
+          <div class="card-body">
+            <h6 class="card-title text-muted">Tickets Abiertos</h6>
+            <h2 class="card-text">42</h2>
+            <small class="text-danger"><i class="bi bi-arrow-down"></i> 5%</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-0 bg-light">
+          <div class="card-body">
+            <h6 class="card-title text-muted">Tiempo de Respuesta</h6>
+            <h2 class="card-text">1.8h</h2>
+            <small class="text-success"><i class="bi bi-arrow-down"></i> 15%</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 border-0 bg-light">
+          <div class="card-body">
+            <h6 class="card-title text-muted">Satisfacción</h6>
+            <h2 class="card-text">92%</h2>
+            <small class="text-success"><i class="bi bi-arrow-up"></i> 3%</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Charts -->
+    <div class="row mb-4">
+      <div class="col-12 col-lg-8 mb-4 mb-lg-0">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Carga de Trabajo del Equipo</h5>
+            <canvas id="teamWorkloadChart"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Distribución de Proyectos</h5>
+            <canvas id="projectDistributionChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Recent Activities -->
+    <div class="card border-0 shadow-sm mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Actividades Recientes</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="fw-bold">Actualización del Firewall</div>
+            <div>Completado por María López</div>
+            <span class="badge bg-success rounded-pill">Completado</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="fw-bold">Implementación de nuevo CRM</div>
+            <div>En progreso - Juan Pérez</div>
+            <span class="badge bg-primary rounded-pill">En Progreso</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="fw-bold">Mantenimiento de Servidores</div>
+            <div>Programado para mañana</div>
+            <span class="badge bg-warning text-dark rounded-pill">Pendiente</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  
