@@ -1,0 +1,82 @@
+<!-- Sidebar -->
+<div class="offcanvas offcanvas-start sidebar-nav" tabindex="-1" id="sidebarNav" aria-labelledby="sidebarNavLabel">
+    <div class="offcanvas-header bg-white">
+      <!-- Logo de la empresa -->
+      <div class="d-flex align-items-center mb-1">
+        <img src="../../../assets/logo.png" alt="Logo Empresa" class="me-2" style="height: 20px;">
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body" style="background-color: #E8F5E9;">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active text-dark" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Configuración</a>
+            </li>
+            <!-- Departamentos -->
+            <li class="nav-item">
+              <span class="nav-link disabled">Departamentos</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Informática</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Mantenimiento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Gerencia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">RRHH</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Oficina Técnica</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Laboratorio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Calidad</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Logística</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Producción</a>
+            </li>
+          </ul>
+    </div>
+  </div>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+    <div class="container-fluid">
+      <img id="logoEmpresa" src="../../../assets/logo.png" data-bs-toggle="offcanvas" type="button" data-bs-target="#sidebarNav" alt="Logo Empresa" class="me-2" style="height: 20px;">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Actividad</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mensajes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Configuración</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ayuda</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <router-outlet></router-outlet>
+  

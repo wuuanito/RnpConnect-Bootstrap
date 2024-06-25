@@ -1,0 +1,72 @@
+.sidebar-nav {
+    width: 250px; /* Ancho del sidebar */
+  }
+  
+  .sidebar-nav .nav-link {
+    color: #333; /* Color del texto de los enlaces */
+  }
+  
+  .sidebar-nav .nav-link:hover {
+    background-color: #C8E6C9; /* Color de fondo al pasar el mouse */
+  }
+  
+  .sidebar-nav .offcanvas-header {
+    border-bottom: 1px solid #4CAF50; /* Borde inferior */
+    padding: 15px; /* Espaciado interno del encabezado */
+  }
+  
+  .sidebar-nav .offcanvas-title {
+    color: #ffffff; /* Color del texto del encabezado */
+    font-size: 1.2rem; /* Tamaño de fuente del título */
+    margin-bottom: 0; /* Eliminar margen inferior del título */
+  }
+  
+  .btn-success {
+    background-color: #4CAF50; /* Color de fondo del botón de activación */
+    border-color: #4CAF50; /* Color del borde del botón de activación */
+  }
+  
+  .btn-success:hover {
+    background-color: #45A049; /* Color de fondo al pasar el mouse del botón de activación */
+    border-color: #45A049; /* Color del borde al pasar el mouse del botón de activación */
+  }
+  
+  .navbar-nav {
+    margin-left: auto; /* Alinear a la derecha */
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 10px 15px; /* Espaciado interno */
+    color: #333; /* Color del texto */
+    font-weight: 500; /* Grosor de la fuente */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #45A049; /* Color del texto al pasar el mouse */
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: #45A049; /* Color del texto activo */
+  }
+  
+  .navbar-nav .nav-link.disabled {
+    color: #6C757D; /* Color del texto deshabilitado */
+    cursor: not-allowed; /* Cursor no permitido */
+  }
+  
+  .navbar-nav .nav-item {
+    margin-left: 10px; /* Margen izquierdo entre elementos */
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-nav {
+      margin-top: 10px; /* Espacio superior en dispositivos móviles */
+      text-align: center; /* Alinear al centro */
+    }
+  
+    .navbar-nav .nav-item {
+      margin-left: 0; /* Eliminar margen izquierdo en dispositivos móviles */
+      margin-bottom: 5px; /* Espacio inferior entre elementos */
+    }
+  }
+  

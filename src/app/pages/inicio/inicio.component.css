@@ -1,0 +1,85 @@
+/* inicio.component.css */
+
+/* Estilos personalizados para Intro.js */
+.introjs-tooltip {
+    background-color: #45A049;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .introjs-tooltiptext {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .introjs-helperLayer {
+    background-color: rgba(69, 160, 73, 0.5);
+  }
+  
+  .introjs-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .introjs-arrow {
+    border-color: #45A049;
+  }
+  
+  .introjs-button {
+    background-color: #ffffff;
+    color: #45A049;
+    border: 1px solid #45A049;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 5px;
+  }
+  
+  .introjs-button:hover {
+    background-color: #45A049;
+    color: #ffffff;
+  }
+  
+  /* Estilos del componente */
+  body {
+    background-color: #f8f9fa;
+  }
+  
+  .jumbotron {
+    background-color: #45A049;
+    color: white;
+    padding: 4rem 2rem;
+    border-radius: 0;
+  }
+  
+  .jumbotron h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
+  
+  .jumbotron p {
+    font-size: 1.5rem;
+  }
+  
+  .card {
+    border: none;
+  }
+  
+  .card-body {
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+  }
+  
+  .btn-primary {
+    background-color: #45A049;
+    border-color: #45A049;
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+  }
+  
+  .btn-primary:hover {
+    background-color: #3b8340;
+    border-color: #3b8340;
+  }
+  
