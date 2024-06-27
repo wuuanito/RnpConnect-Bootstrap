@@ -1,0 +1,31 @@
+/* app.component.scss */
+
+/* Estilos para el panel en sí */
+.mat-expansion-panel {
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Para ocultar el borde redondeado del contenido */
+  }
+  
+  /* Estilos para el encabezado del panel */
+  .mat-expansion-panel-header {
+    background-color: #f0f0f0; /* Fondo del encabezado */
+    border-bottom: 1px solid #ddd; /* Borde inferior del encabezado */
+    padding: 16px; /* Espaciado interno */
+    border-radius: 8px; /* Borde redondeado */
+    cursor: pointer; /* Cambia el cursor a pointer al pasar el ratón */
+  }
+  
+  /* Estilos para el título del panel */
+  .mat-expansion-panel-header-title {
+    font-size: 18px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+  }
+  
+  /* Estilos para el contenido del panel */
+  .mat-expansion-panel-content {
+    padding: 16px; /* Espaciado interno del contenido */
+    font-size: 16px; /* Tamaño del texto del contenido */
+  }
+  

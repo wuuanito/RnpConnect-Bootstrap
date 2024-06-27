@@ -4,9 +4,11 @@ import { LayoutComponent } from './pages/layout/layout.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { InformaticaComponent } from './pages/DEPARTAMENTOS/informatica/informatica.component';
 import { Informaticav0Component } from './pages/DEPARTAMENTOS/informaticav0/informaticav0.component';
 import { InicioInformaticaComponent } from './pages/DEPARTAMENTOS/informaticav0/inicio-informatica/inicio-informatica.component';
+import { BolsaInformaticaComponent } from './pages/DEPARTAMENTOS/informaticav0/bolsa-informatica/bolsa-informatica.component';
+import { SolicitudesInformaticaComponent } from './pages/DEPARTAMENTOS/informaticav0/solicitudes-informatica/solicitudes-informatica.component';
+import { UsuariosInformaticaComponent } from './pages/DEPARTAMENTOS/informaticav0/usuarios-informatica/usuarios-informatica.component';
 export const routes: Routes = [
     {
         path: '',
@@ -32,6 +34,18 @@ export const routes: Routes = [
               {
                 path:'inicio-informatica',
                 component:InicioInformaticaComponent
+              },
+              {
+                path:'bolsa-informatica',
+                component:BolsaInformaticaComponent
+              },
+              {
+                path:'solicitudes-informatica',
+                component:SolicitudesInformaticaComponent
+              },
+              {
+                path:'usuarios-informatica',
+                component:UsuariosInformaticaComponent
               }
                 
             ]

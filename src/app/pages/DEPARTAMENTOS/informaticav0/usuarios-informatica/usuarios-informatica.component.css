@@ -1,0 +1,38 @@
+table {
+    width: 100%;
+  }
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  .fab-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+  }
+  .role-badge, .status-badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .role-admin {
+    background-color: #f44336;
+    color: white;
+  }
+  .role-user {
+    background-color: #2196f3;
+    color: white;
+  }
+  .role-guest {
+    background-color: #ff9800;
+    color: white;
+  }
+  .status-active {
+    background-color: #4caf50;
+    color: white;
+  }
+  .status-inactive {
+    background-color: #9e9e9e;
+    color: white;
+  }

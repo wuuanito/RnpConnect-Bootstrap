@@ -1,0 +1,14 @@
+<div style="margin: 20px;">
+    <button class="btn btn-primary" (click)="addProvider()">Agregar Proveedor</button>
+    <br>
+    <hr>
+    <mat-expansion-panel *ngFor="let panel of panels">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ panel.title }}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>{{ panel.content }}</p>
+    </mat-expansion-panel>
+  </div>
+  

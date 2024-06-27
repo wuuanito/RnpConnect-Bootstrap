@@ -1,0 +1,24 @@
+.compact-card .card-body {
+    padding: 0.5rem;
+  }
+  
+  .compact-card h2 {
+    font-size: 1.5rem;
+  }
+  
+  .compact-card h6 {
+    font-size: 0.8rem;
+  }
+  
+  .card-title.h6 {
+    font-size: 1rem;
+  }
+  
+  .list-group-item {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+  
+  .list-group-item small {
+    font-size: 0.75rem;
+  }

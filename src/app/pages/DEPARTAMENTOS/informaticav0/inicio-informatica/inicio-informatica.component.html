@@ -1,90 +1,165 @@
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom">
-      <h1 class="h2">Panel de Control TI</h1>
-    </div>
-  
-    <!-- KPI Cards -->
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 mb-4">
-      <div class="col">
-        <div class="card h-100 border-0 bg-light">
-          <div class="card-body">
-            <h6 class="card-title text-muted">Proyectos Activos</h6>
-            <h2 class="card-text">18</h2>
-            <small class="text-success"><i class="bi bi-arrow-up"></i> 12%</small>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 border-0 bg-light">
-          <div class="card-body">
-            <h6 class="card-title text-muted">Tickets Abiertos</h6>
-            <h2 class="card-text">42</h2>
-            <small class="text-danger"><i class="bi bi-arrow-down"></i> 5%</small>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 border-0 bg-light">
-          <div class="card-body">
-            <h6 class="card-title text-muted">Tiempo de Respuesta</h6>
-            <h2 class="card-text">1.8h</h2>
-            <small class="text-success"><i class="bi bi-arrow-down"></i> 15%</small>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 border-0 bg-light">
-          <div class="card-body">
-            <h6 class="card-title text-muted">Satisfacción</h6>
-            <h2 class="card-text">92%</h2>
-            <small class="text-success"><i class="bi bi-arrow-up"></i> 3%</small>
-          </div>
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-3">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap pt-2 pb-1 mb-2 border-bottom">
+    <h1 class="h3">Panel de Control TI</h1>
+  </div>
+
+  <!-- KPI Cards -->
+  <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-2 mb-3">
+    <div class="col">
+      <div class="card h-100 border-0 bg-light compact-card">
+        <div class="card-body p-2">
+          <h6 class="card-title text-muted mb-1">Tickets Abiertos</h6>
+          <h2 class="card-text mb-0">42</h2>
+          <small class="text-danger"><i class="bi bi-arrow-up"></i> 5%</small>
         </div>
       </div>
     </div>
-  
-    <!-- Charts -->
-    <div class="row mb-4">
-      <div class="col-12 col-lg-8 mb-4 mb-lg-0">
-        <div class="card border-0 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Carga de Trabajo del Equipo</h5>
-            <canvas id="teamWorkloadChart"></canvas>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-4">
-        <div class="card border-0 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Distribución de Proyectos</h5>
-            <canvas id="projectDistributionChart"></canvas>
-          </div>
+    <div class="col">
+      <div class="card h-100 border-0 bg-light compact-card">
+        <div class="card-body p-2">
+          <h6 class="card-title text-muted mb-1">Proyectos Activos</h6>
+          <h2 class="card-text mb-0">7</h2>
+          <small class="text-success"><i class="bi bi-arrow-up"></i> 2</small>
         </div>
       </div>
     </div>
-  
-    <!-- Recent Activities -->
-    <div class="card border-0 shadow-sm mb-4">
-      <div class="card-body">
-        <h5 class="card-title">Actividades Recientes</h5>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item d-flex justify-content-between align-items-start">
-            <div class="fw-bold">Actualización del Firewall</div>
-            <div>Completado por María López</div>
-            <span class="badge bg-success rounded-pill">Completado</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-start">
-            <div class="fw-bold">Implementación de nuevo CRM</div>
-            <div>En progreso - Juan Pérez</div>
-            <span class="badge bg-primary rounded-pill">En Progreso</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-start">
-            <div class="fw-bold">Mantenimiento de Servidores</div>
-            <div>Programado para mañana</div>
-            <span class="badge bg-warning text-dark rounded-pill">Pendiente</span>
-          </li>
-        </ul>
+    <div class="col">
+      <div class="card h-100 border-0 bg-light compact-card">
+        <div class="card-body p-2">
+          <h6 class="card-title text-muted mb-1">Horas Disponibles</h6>
+          <h2 class="card-text mb-0">120h</h2>
+          <small class="text-danger"><i class="bi bi-arrow-down"></i> 15h</small>
+        </div>
       </div>
     </div>
-  </main>
-  
+    <div class="col">
+      <div class="card h-100 border-0 bg-light compact-card">
+        <div class="card-body p-2">
+          <h6 class="card-title text-muted mb-1">Equipos en Stock</h6>
+          <h2 class="card-text mb-0">23</h2>
+          <small class="text-success"><i class="bi bi-arrow-up"></i> 5</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts and Tables -->
+  <div class="row mb-3">
+    <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-2">
+          <h5 class="card-title h6 mb-2">Proyectos en Curso</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+              <span>Migración a la Nube</span>
+              <span class="badge bg-primary rounded-pill">En progreso</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+              <span>Actualización de Firewall</span>
+              <span class="badge bg-success rounded-pill">Completado</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+              <span>Implementación de VoIP</span>
+              <span class="badge bg-warning text-dark rounded-pill">Pendiente</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-2">
+          <h5 class="card-title h6 mb-2">Uso de Bolsa de Horas</h5>
+          <canvas id="hoursBankChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-2">
+          <h5 class="card-title h6 mb-2">Solicitudes Recientes</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between align-items-start py-2">
+              <div class="me-auto">
+                <div class="fw-bold">Nuevo Laptop</div>
+                <small>Solicitado por: Ana Gómez</small>
+              </div>
+              <span class="badge bg-info rounded-pill">Nueva</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start py-2">
+              <div class="me-auto">
+                <div class="fw-bold">Acceso VPN</div>
+                <small>Solicitado por: Carlos Ruiz</small>
+              </div>
+              <span class="badge bg-primary rounded-pill">En Revisión</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start py-2">
+              <div class="me-auto">
+                <div class="fw-bold">Actualización de Software</div>
+                <small>Solicitado por: Elena Torres</small>
+              </div>
+              <span class="badge bg-success rounded-pill">Aprobada</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-2">
+          <h5 class="card-title h6 mb-2">Inventario de Equipos</h5>
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Disponibles</th>
+                <th>En Uso</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Laptops</td>
+                <td>12</td>
+                <td>45</td>
+              </tr>
+              <tr>
+                <td>Desktops</td>
+                <td>8</td>
+                <td>30</td>
+              </tr>
+              <tr>
+                <td>Tablets</td>
+                <td>3</td>
+                <td>10</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tareas Pendientes -->
+  <div class="card border-0 shadow-sm mb-3">
+    <div class="card-body p-2">
+      <h5 class="card-title h6 mb-2">Tareas Pendientes</h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+          <span>Actualización de sistemas operativos</span>
+          <span class="badge bg-warning text-dark rounded-pill">Alta</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+          <span>Revisión de políticas de seguridad</span>
+          <span class="badge bg-info rounded-pill">Media</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center py-2">
+          <span>Mantenimiento de servidores</span>
+          <span class="badge bg-danger rounded-pill">Crítica</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
