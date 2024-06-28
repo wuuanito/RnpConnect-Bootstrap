@@ -1,83 +1,106 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
-import { MatDialog } from '@angular/material/dialog';
-import {MatIconModule} from '@angular/material/icon';
-import {MatChipsModule} from '@angular/material/chips';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import { CommonModule } from '@angular/common'; 
-import {MatTableModule} from '@angular/material/table';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { CommonModule } from '@angular/common';
+import { MatTableModule, MatTableDataSource } from '@angular/material/table';
+import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule, MatDialog } from '@angular/material/dialog';
+
+
 interface User {
   id: number;
-  username: string;
+  name: string;
   email: string;
   role: string;
-  status: 'active' | 'inactive';
+  avatar: string;
 }
+
+
+
+
 @Component({
   selector: 'app-usuarios-informatica',
   standalone: true,
-  imports: [MatTableModule,MatPaginator,MatSort,MatIconModule,MatChipsModule,MatFormFieldModule,CommonModule],
+  imports: [ 
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatToolbarModule,
+    CommonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatDialogModule
+    
+  ],
   templateUrl: './usuarios-informatica.component.html',
   styleUrl: './usuarios-informatica.component.css'
 })
-export class UsuariosInformaticaComponent implements OnInit, AfterViewInit {
-  displayedColumns: string[] = ['id', 'username', 'email', 'role', 'status', 'actions'];
+export class UsuariosInformaticaComponent  {
+  displayedColumns: string[] = ['avatar', 'name', 'email', 'role', 'actions'];
   dataSource: MatTableDataSource<User>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(public dialog: MatDialog) {
-    const users: User[] = Array(50).fill(null).map((_, index) => ({
-      id: index + 1,
-      username: `user${index + 1}`,
-      email: `user${index + 1}@example.com`,
-      role: ['admin', 'user', 'guest'][Math.floor(Math.random() * 3)],
-      status: Math.random() > 0.3 ? 'active' : 'inactive'
-    }));
+  users: User[] = [
+    { id: 1, name: 'John Doe', email: 'john@example.com', role: 'Admin', avatar: 'assets/avatars/john.jpg' },
+    { id: 2, name: 'Jane Doe', email: 'jane@example.com', role: 'User', avatar: 'assets/avatars/jane.jpg' },
+    { id: 2, name: 'Jane Doe', email: 'jane@example.com', role: 'User', avatar: 'assets/avatars/jane.jpg' },
+    { id: 2, name: 'Jane Doe', email: 'jane@example.com', role: 'User', avatar: 'assets/avatars/jane.jpg' },
+    { id: 2, name: 'Jane Doe', email: 'jane@example.com', role: 'User', avatar: 'assets/avatars/jane.jpg' },
+    { id: 2, name: 'Jane Doe', email: 'jane@example.com', role: 'User', avatar: 'assets/avatars/jane.jpg' },
+    { id: 2, name: 'Jane Doe', email: 'jane@example.com', role: 'User', avatar: 'assets/avatars/jane.jpg' },
+    { id: 2, name: 'Jane Doe', email: 'jane@example.com', role: 'User', avatar: 'assets/avatars/jane.jpg' },
+    { id: 2, name: 'Jane Doe', email: 'jane@example.com', role: 'User', avatar: 'assets/avatars/jane.jpg' },
+    { id: 2, name: 'Jane Doe', email: 'jane@example.com', role: 'User', avatar: 'assets/avatars/jane.jpg' },
+    { id: 2, name: 'Jane Doe', email: 'jane@example.com', role: 'User', avatar: 'assets/avatars/jane.jpg' },
 
-    this.dataSource = new MatTableDataSource(users);
+    // Añade más usuarios aquí
+  ];
+
+  constructor(private dialog: MatDialog) {
+    this.dataSource = new MatTableDataSource(this.users);
   }
 
   ngOnInit() {
-    // Inicialización adicional si es necesaria
+    this.dataSource.filterPredicate = (data: User, filter: string) => {
+      return data.name.toLowerCase().includes(filter) ||
+             data.email.toLowerCase().includes(filter) ||
+             data.id.toString().includes(filter);
+    };
   }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
   }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
+  addUser() {
+    // Aquí puedes abrir un diálogo para añadir un nuevo usuario
+    console.log('Añadir usuario');
   }
 
   editUser(user: User) {
-    console.log('Editar usuario:', user);
+    // Aquí puedes abrir un diálogo para editar el usuario
+    console.log('Editar usuario', user);
   }
 
-  deleteUser(id: number) {
-    if (confirm('¿Está seguro de que desea eliminar este usuario?')) {
-      this.dataSource.data = this.dataSource.data.filter(u => u.id !== id);
-    }
-  }
-
-  openDialog() {
-    console.log('Abrir diálogo para crear nuevo usuario');
-  }
-
-  getRoleClass(role: string): string {
-    return `role-${role.toLowerCase()}`;
-  }
-
-  getStatusClass(status: string): string {
-    return `status-${status.toLowerCase()}`;
+  deleteUser(user: User) {
+    // Aquí puedes abrir un diálogo de confirmación antes de eliminar
+    console.log('Eliminar usuario', user);
+    this.users = this.users.filter(u => u.id !== user.id);
+    this.dataSource.data = this.users;
   }
 }
